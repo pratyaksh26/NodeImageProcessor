@@ -1,14 +1,11 @@
-// BlurNode.hpp
 #pragma once
 #include "NodeBase.hpp"
 
-class BlurNode : public Node {
+class BlurNode : public NodeBase {
 public:
     BlurNode();
     void process() override;
-    void drawGUI() override;
-    
+    void renderProperties() override;
 private:
-    int radius = 3;
-    bool isGaussian = true;
+    int kernel_size_; // Gaussian blur kernel size (odd, 3 to 31)
 };

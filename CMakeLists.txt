@@ -37,6 +37,7 @@ set(SOURCES
     src/nodes/InputNode.cpp
     src/nodes/OutputNode.cpp
     src/nodes/BrightnessNode.cpp
+    src/nodes/BlurNode.cpp
 )
 
 # Include directories

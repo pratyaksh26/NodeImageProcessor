@@ -1,21 +1,33 @@
-// BlurNode.cpp
-#include "BlurNode.hpp"
-#include <opencv2/opencv.hpp>
+#include "nodes/BlurNode.hpp"
+#include <imgui.h>
+#include <opencv2/imgproc.hpp>
 
-BlurNode::BlurNode() {
-    // Initialize node properties
-}
+BlurNode::BlurNode() : NodeBase("Blur Node", 1, 1), kernel_size_(3) {}
 
 void BlurNode::process() {
-    if(inputs.empty() || inputs[0]->output.empty()) return;
-    
-    if(isGaussian) {
-        cv::GaussianBlur(inputs[0]->output, output, cv::Size(radius*2+1, radius*2+1), 0);
+    if (!inputs_[0].empty()) {
+        cv::Mat input = inputs_[0][0].node->getOutput(inputs_[0][0].output_idx);
+        if (!input.empty()) {
+            cv::Mat output;
+            // Ensure kernel_size_ is odd and at least 3
+            int ksize = kernel_size_ % 2 == 0 ? kernel_size_ + 1 : kernel_size_;
+            ksize = std::max(3, ksize);
+            // Apply Gaussian blur
+            cv::GaussianBlur(input, output, cv::Size(ksize, ksize), 0);
+            outputs_[0] = output.clone();
+        } else {
+            outputs_[0] = cv::Mat();
+        }
     } else {
-        cv::blur(inputs[0]->output, output, cv::Size(radius*2+1, radius*2+1));
+        outputs_[0] = cv::Mat();
     }
 }
 
-void BlurNode::drawGUI() {
-    // SFML/ImGui drawing code
+void BlurNode::renderProperties() {
+    if (ImGui::SliderInt("Kernel Size", &kernel_size_, 3, 31)) {
+        // Ensure kernel_size_ is odd
+        if (kernel_size_ % 2 == 0) kernel_size_ += 1;
+        kernel_size_ = std::clamp(kernel_size_, 3, 31);
+        process();
+    }
 }

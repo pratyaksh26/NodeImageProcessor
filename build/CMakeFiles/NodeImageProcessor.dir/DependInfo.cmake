@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/libs/imnodes/imnodes.cpp" "CMakeFiles/NodeImageProcessor.dir/libs/imnodes/imnodes.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/libs/imnodes/imnodes.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/NodeGraph.cpp" "CMakeFiles/NodeImageProcessor.dir/src/NodeGraph.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/NodeGraph.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/main.cpp" "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/BlurNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/BrightnessNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/InputNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/NodeBase.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o.d"

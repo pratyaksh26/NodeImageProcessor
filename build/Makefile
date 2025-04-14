@@ -369,6 +369,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/nodes/BlurNode.o: src/nodes/BlurNode.cpp.o
+.PHONY : src/nodes/BlurNode.o
+
+# target to build an object file
+src/nodes/BlurNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o
+.PHONY : src/nodes/BlurNode.cpp.o
+
+src/nodes/BlurNode.i: src/nodes/BlurNode.cpp.i
+.PHONY : src/nodes/BlurNode.i
+
+# target to preprocess a source file
+src/nodes/BlurNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.i
+.PHONY : src/nodes/BlurNode.cpp.i
+
+src/nodes/BlurNode.s: src/nodes/BlurNode.cpp.s
+.PHONY : src/nodes/BlurNode.s
+
+# target to generate assembly for a file
+src/nodes/BlurNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.s
+.PHONY : src/nodes/BlurNode.cpp.s
+
 src/nodes/BrightnessNode.o: src/nodes/BrightnessNode.cpp.o
 .PHONY : src/nodes/BrightnessNode.o
 
@@ -504,6 +528,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/nodes/BlurNode.o"
+	@echo "... src/nodes/BlurNode.i"
+	@echo "... src/nodes/BlurNode.s"
 	@echo "... src/nodes/BrightnessNode.o"
 	@echo "... src/nodes/BrightnessNode.i"
 	@echo "... src/nodes/BrightnessNode.s"

@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/NodeImageProcessor.dir/src/NodeGraph.cpp.o.d"
   "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o"
   "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o.d"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o.d"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o.d"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o"
