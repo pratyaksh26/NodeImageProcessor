@@ -20,9 +20,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/main.cpp" "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/BlurNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BlurNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/BrightnessNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/ColorChannelSplitterNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/ContrastNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/GrayscaleNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/GrayscaleNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/GrayscaleNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/InputNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/NodeBase.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/OutputNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/SharpenNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

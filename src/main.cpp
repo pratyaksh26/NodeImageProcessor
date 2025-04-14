@@ -5,6 +5,10 @@
 #include "nodes/OutputNode.hpp"
 #include "nodes/BrightnessNode.hpp"
 #include "nodes/BlurNode.hpp"
+
+#include "nodes/ContrastNode.hpp"
+#include "nodes/SharpenNode.hpp"
+#include "nodes/GrayscaleNode.hpp"
 #include <imgui.h>
 #include <imgui_impl_sdl2.h>
 #include <imgui_impl_opengl3.h>
@@ -32,10 +36,17 @@ int main(int, char**) {
     std::shared_ptr<InputNode> input_node = std::make_shared<InputNode>();
     std::shared_ptr<BrightnessNode> brightness_node = std::make_shared<BrightnessNode>();
     std::shared_ptr<BlurNode> blur_node = std::make_shared<BlurNode>();
+    std::shared_ptr<ContrastNode> contrast_node = std::make_shared<ContrastNode>();
+    std::shared_ptr<SharpenNode> sharpen_node = std::make_shared<SharpenNode>();
+    std::shared_ptr<GrayscaleNode> grayscale_node = std::make_shared<GrayscaleNode>();
     std::shared_ptr<OutputNode> output_node = std::make_shared<OutputNode>();
     graph.addNode(input_node);
     graph.addNode(brightness_node);
     graph.addNode(blur_node);
+    graph.addNode(contrast_node);
+    graph.addNode(sharpen_node);
+  
+    graph.addNode(grayscale_node);
     graph.addNode(output_node);
     // No programmatic connections
 
@@ -69,6 +80,10 @@ int main(int, char**) {
         input_node->renderProperties();
         brightness_node->renderProperties();
         blur_node->renderProperties();
+        contrast_node->renderProperties();
+        sharpen_node->renderProperties();
+        
+        grayscale_node->renderProperties();
         output_node->renderProperties();
         ImGui::End();
 

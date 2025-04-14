@@ -417,6 +417,78 @@ src/nodes/BrightnessNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.s
 .PHONY : src/nodes/BrightnessNode.cpp.s
 
+src/nodes/ColorChannelSplitterNode.o: src/nodes/ColorChannelSplitterNode.cpp.o
+.PHONY : src/nodes/ColorChannelSplitterNode.o
+
+# target to build an object file
+src/nodes/ColorChannelSplitterNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.o
+.PHONY : src/nodes/ColorChannelSplitterNode.cpp.o
+
+src/nodes/ColorChannelSplitterNode.i: src/nodes/ColorChannelSplitterNode.cpp.i
+.PHONY : src/nodes/ColorChannelSplitterNode.i
+
+# target to preprocess a source file
+src/nodes/ColorChannelSplitterNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.i
+.PHONY : src/nodes/ColorChannelSplitterNode.cpp.i
+
+src/nodes/ColorChannelSplitterNode.s: src/nodes/ColorChannelSplitterNode.cpp.s
+.PHONY : src/nodes/ColorChannelSplitterNode.s
+
+# target to generate assembly for a file
+src/nodes/ColorChannelSplitterNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.s
+.PHONY : src/nodes/ColorChannelSplitterNode.cpp.s
+
+src/nodes/ContrastNode.o: src/nodes/ContrastNode.cpp.o
+.PHONY : src/nodes/ContrastNode.o
+
+# target to build an object file
+src/nodes/ContrastNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.o
+.PHONY : src/nodes/ContrastNode.cpp.o
+
+src/nodes/ContrastNode.i: src/nodes/ContrastNode.cpp.i
+.PHONY : src/nodes/ContrastNode.i
+
+# target to preprocess a source file
+src/nodes/ContrastNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.i
+.PHONY : src/nodes/ContrastNode.cpp.i
+
+src/nodes/ContrastNode.s: src/nodes/ContrastNode.cpp.s
+.PHONY : src/nodes/ContrastNode.s
+
+# target to generate assembly for a file
+src/nodes/ContrastNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.s
+.PHONY : src/nodes/ContrastNode.cpp.s
+
+src/nodes/GrayscaleNode.o: src/nodes/GrayscaleNode.cpp.o
+.PHONY : src/nodes/GrayscaleNode.o
+
+# target to build an object file
+src/nodes/GrayscaleNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/GrayscaleNode.cpp.o
+.PHONY : src/nodes/GrayscaleNode.cpp.o
+
+src/nodes/GrayscaleNode.i: src/nodes/GrayscaleNode.cpp.i
+.PHONY : src/nodes/GrayscaleNode.i
+
+# target to preprocess a source file
+src/nodes/GrayscaleNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/GrayscaleNode.cpp.i
+.PHONY : src/nodes/GrayscaleNode.cpp.i
+
+src/nodes/GrayscaleNode.s: src/nodes/GrayscaleNode.cpp.s
+.PHONY : src/nodes/GrayscaleNode.s
+
+# target to generate assembly for a file
+src/nodes/GrayscaleNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/GrayscaleNode.cpp.s
+.PHONY : src/nodes/GrayscaleNode.cpp.s
+
 src/nodes/InputNode.o: src/nodes/InputNode.cpp.o
 .PHONY : src/nodes/InputNode.o
 
@@ -489,6 +561,30 @@ src/nodes/OutputNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.s
 .PHONY : src/nodes/OutputNode.cpp.s
 
+src/nodes/SharpenNode.o: src/nodes/SharpenNode.cpp.o
+.PHONY : src/nodes/SharpenNode.o
+
+# target to build an object file
+src/nodes/SharpenNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o
+.PHONY : src/nodes/SharpenNode.cpp.o
+
+src/nodes/SharpenNode.i: src/nodes/SharpenNode.cpp.i
+.PHONY : src/nodes/SharpenNode.i
+
+# target to preprocess a source file
+src/nodes/SharpenNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.i
+.PHONY : src/nodes/SharpenNode.cpp.i
+
+src/nodes/SharpenNode.s: src/nodes/SharpenNode.cpp.s
+.PHONY : src/nodes/SharpenNode.s
+
+# target to generate assembly for a file
+src/nodes/SharpenNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.s
+.PHONY : src/nodes/SharpenNode.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -534,6 +630,15 @@ help:
 	@echo "... src/nodes/BrightnessNode.o"
 	@echo "... src/nodes/BrightnessNode.i"
 	@echo "... src/nodes/BrightnessNode.s"
+	@echo "... src/nodes/ColorChannelSplitterNode.o"
+	@echo "... src/nodes/ColorChannelSplitterNode.i"
+	@echo "... src/nodes/ColorChannelSplitterNode.s"
+	@echo "... src/nodes/ContrastNode.o"
+	@echo "... src/nodes/ContrastNode.i"
+	@echo "... src/nodes/ContrastNode.s"
+	@echo "... src/nodes/GrayscaleNode.o"
+	@echo "... src/nodes/GrayscaleNode.i"
+	@echo "... src/nodes/GrayscaleNode.s"
 	@echo "... src/nodes/InputNode.o"
 	@echo "... src/nodes/InputNode.i"
 	@echo "... src/nodes/InputNode.s"
@@ -543,6 +648,9 @@ help:
 	@echo "... src/nodes/OutputNode.o"
 	@echo "... src/nodes/OutputNode.i"
 	@echo "... src/nodes/OutputNode.s"
+	@echo "... src/nodes/SharpenNode.o"
+	@echo "... src/nodes/SharpenNode.i"
+	@echo "... src/nodes/SharpenNode.s"
 .PHONY : help
 
 
