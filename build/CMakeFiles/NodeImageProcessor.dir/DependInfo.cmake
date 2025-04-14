@@ -26,7 +26,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/InputNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/InputNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/NodeBase.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/OutputNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/SaturationNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.o.d"
   "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/SharpenNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o.d"
+  "/mnt/c/Users/Pratyaksh Bhayre/Desktop/nww/node-image-processor/src/nodes/ThresholdNode.cpp" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.o" "gcc" "CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

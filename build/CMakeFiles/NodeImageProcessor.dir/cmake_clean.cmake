@@ -35,8 +35,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/NodeBase.cpp.o.d"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.o.d"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.o"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.o.d"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o"
   "CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.o.d"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.o"
+  "CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.o.d"
   "NodeImageProcessor"
   "NodeImageProcessor.pdb"
 )

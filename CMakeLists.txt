@@ -105,6 +105,8 @@ set(SOURCES
     src/nodes/SharpenNode.cpp
     src/nodes/GrayscaleNode.cpp
     src/nodes/EdgeDetectionNode.cpp
+    src/nodes/SaturationNode.cpp
+    src/nodes/ThresholdNode.cpp
 
 )
 

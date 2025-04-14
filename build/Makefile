@@ -561,6 +561,30 @@ src/nodes/OutputNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/OutputNode.cpp.s
 .PHONY : src/nodes/OutputNode.cpp.s
 
+src/nodes/SaturationNode.o: src/nodes/SaturationNode.cpp.o
+.PHONY : src/nodes/SaturationNode.o
+
+# target to build an object file
+src/nodes/SaturationNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.o
+.PHONY : src/nodes/SaturationNode.cpp.o
+
+src/nodes/SaturationNode.i: src/nodes/SaturationNode.cpp.i
+.PHONY : src/nodes/SaturationNode.i
+
+# target to preprocess a source file
+src/nodes/SaturationNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.i
+.PHONY : src/nodes/SaturationNode.cpp.i
+
+src/nodes/SaturationNode.s: src/nodes/SaturationNode.cpp.s
+.PHONY : src/nodes/SaturationNode.s
+
+# target to generate assembly for a file
+src/nodes/SaturationNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SaturationNode.cpp.s
+.PHONY : src/nodes/SaturationNode.cpp.s
+
 src/nodes/SharpenNode.o: src/nodes/SharpenNode.cpp.o
 .PHONY : src/nodes/SharpenNode.o
 
@@ -584,6 +608,30 @@ src/nodes/SharpenNode.s: src/nodes/SharpenNode.cpp.s
 src/nodes/SharpenNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/SharpenNode.cpp.s
 .PHONY : src/nodes/SharpenNode.cpp.s
+
+src/nodes/ThresholdNode.o: src/nodes/ThresholdNode.cpp.o
+.PHONY : src/nodes/ThresholdNode.o
+
+# target to build an object file
+src/nodes/ThresholdNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.o
+.PHONY : src/nodes/ThresholdNode.cpp.o
+
+src/nodes/ThresholdNode.i: src/nodes/ThresholdNode.cpp.i
+.PHONY : src/nodes/ThresholdNode.i
+
+# target to preprocess a source file
+src/nodes/ThresholdNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.i
+.PHONY : src/nodes/ThresholdNode.cpp.i
+
+src/nodes/ThresholdNode.s: src/nodes/ThresholdNode.cpp.s
+.PHONY : src/nodes/ThresholdNode.s
+
+# target to generate assembly for a file
+src/nodes/ThresholdNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ThresholdNode.cpp.s
+.PHONY : src/nodes/ThresholdNode.cpp.s
 
 # Help Target
 help:
@@ -648,9 +696,15 @@ help:
 	@echo "... src/nodes/OutputNode.o"
 	@echo "... src/nodes/OutputNode.i"
 	@echo "... src/nodes/OutputNode.s"
+	@echo "... src/nodes/SaturationNode.o"
+	@echo "... src/nodes/SaturationNode.i"
+	@echo "... src/nodes/SaturationNode.s"
 	@echo "... src/nodes/SharpenNode.o"
 	@echo "... src/nodes/SharpenNode.i"
 	@echo "... src/nodes/SharpenNode.s"
+	@echo "... src/nodes/ThresholdNode.o"
+	@echo "... src/nodes/ThresholdNode.i"
+	@echo "... src/nodes/ThresholdNode.s"
 .PHONY : help
 
 
