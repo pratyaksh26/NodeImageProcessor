@@ -9,6 +9,7 @@
 #include "nodes/ContrastNode.hpp"
 #include "nodes/SharpenNode.hpp"
 #include "nodes/GrayscaleNode.hpp"
+#include "nodes/EdgeDetectionNode.hpp"
 #include <imgui.h>
 #include <imgui_impl_sdl2.h>
 #include <imgui_impl_opengl3.h>
@@ -39,6 +40,7 @@ int main(int, char**) {
     std::shared_ptr<ContrastNode> contrast_node = std::make_shared<ContrastNode>();
     std::shared_ptr<SharpenNode> sharpen_node = std::make_shared<SharpenNode>();
     std::shared_ptr<GrayscaleNode> grayscale_node = std::make_shared<GrayscaleNode>();
+    std::shared_ptr<EdgeDetectionNode> edge_node = std::make_shared<EdgeDetectionNode>();
     std::shared_ptr<OutputNode> output_node = std::make_shared<OutputNode>();
     graph.addNode(input_node);
     graph.addNode(brightness_node);
@@ -47,6 +49,7 @@ int main(int, char**) {
     graph.addNode(sharpen_node);
   
     graph.addNode(grayscale_node);
+    graph.addNode(edge_node);
     graph.addNode(output_node);
     // No programmatic connections
 
@@ -84,6 +87,7 @@ int main(int, char**) {
         sharpen_node->renderProperties();
         
         grayscale_node->renderProperties();
+        edge_node->renderProperties();
         output_node->renderProperties();
         ImGui::End();
 

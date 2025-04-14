@@ -363,8 +363,8 @@ CMakeFiles/NodeImageProcessor.dir/src/main.cpp.o: \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/BlurNode.hpp \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/ContrastNode.hpp \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/SharpenNode.hpp \
- /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/ColorChannelSplitterNode.hpp \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/GrayscaleNode.hpp \
+ /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/EdgeDetectionNode.hpp \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/libs/imgui/backends/imgui_impl_sdl2.h \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/libs/imgui/backends/imgui_impl_opengl3.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \

@@ -104,6 +104,7 @@ set(SOURCES
     src/nodes/ContrastNode.cpp
     src/nodes/SharpenNode.cpp
     src/nodes/GrayscaleNode.cpp
+    src/nodes/EdgeDetectionNode.cpp
 
 )
 

@@ -1,7 +1,7 @@
-CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.o: \
- /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/ColorChannelSplitterNode.cpp \
+CMakeFiles/NodeImageProcessor.dir/src/nodes/EdgeDetectionNode.cpp.o: \
+ /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/EdgeDetectionNode.cpp \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/ColorChannelSplitterNode.hpp \
+ /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/EdgeDetectionNode.hpp \
  /mnt/c/Users/Pratyaksh\ Bhayre/Desktop/nww/node-image-processor/src/nodes/NodeBase.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \

@@ -417,30 +417,6 @@ src/nodes/BrightnessNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/BrightnessNode.cpp.s
 .PHONY : src/nodes/BrightnessNode.cpp.s
 
-src/nodes/ColorChannelSplitterNode.o: src/nodes/ColorChannelSplitterNode.cpp.o
-.PHONY : src/nodes/ColorChannelSplitterNode.o
-
-# target to build an object file
-src/nodes/ColorChannelSplitterNode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.o
-.PHONY : src/nodes/ColorChannelSplitterNode.cpp.o
-
-src/nodes/ColorChannelSplitterNode.i: src/nodes/ColorChannelSplitterNode.cpp.i
-.PHONY : src/nodes/ColorChannelSplitterNode.i
-
-# target to preprocess a source file
-src/nodes/ColorChannelSplitterNode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.i
-.PHONY : src/nodes/ColorChannelSplitterNode.cpp.i
-
-src/nodes/ColorChannelSplitterNode.s: src/nodes/ColorChannelSplitterNode.cpp.s
-.PHONY : src/nodes/ColorChannelSplitterNode.s
-
-# target to generate assembly for a file
-src/nodes/ColorChannelSplitterNode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ColorChannelSplitterNode.cpp.s
-.PHONY : src/nodes/ColorChannelSplitterNode.cpp.s
-
 src/nodes/ContrastNode.o: src/nodes/ContrastNode.cpp.o
 .PHONY : src/nodes/ContrastNode.o
 
@@ -464,6 +440,30 @@ src/nodes/ContrastNode.s: src/nodes/ContrastNode.cpp.s
 src/nodes/ContrastNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/ContrastNode.cpp.s
 .PHONY : src/nodes/ContrastNode.cpp.s
+
+src/nodes/EdgeDetectionNode.o: src/nodes/EdgeDetectionNode.cpp.o
+.PHONY : src/nodes/EdgeDetectionNode.o
+
+# target to build an object file
+src/nodes/EdgeDetectionNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/EdgeDetectionNode.cpp.o
+.PHONY : src/nodes/EdgeDetectionNode.cpp.o
+
+src/nodes/EdgeDetectionNode.i: src/nodes/EdgeDetectionNode.cpp.i
+.PHONY : src/nodes/EdgeDetectionNode.i
+
+# target to preprocess a source file
+src/nodes/EdgeDetectionNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/EdgeDetectionNode.cpp.i
+.PHONY : src/nodes/EdgeDetectionNode.cpp.i
+
+src/nodes/EdgeDetectionNode.s: src/nodes/EdgeDetectionNode.cpp.s
+.PHONY : src/nodes/EdgeDetectionNode.s
+
+# target to generate assembly for a file
+src/nodes/EdgeDetectionNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/NodeImageProcessor.dir/build.make CMakeFiles/NodeImageProcessor.dir/src/nodes/EdgeDetectionNode.cpp.s
+.PHONY : src/nodes/EdgeDetectionNode.cpp.s
 
 src/nodes/GrayscaleNode.o: src/nodes/GrayscaleNode.cpp.o
 .PHONY : src/nodes/GrayscaleNode.o
@@ -630,12 +630,12 @@ help:
 	@echo "... src/nodes/BrightnessNode.o"
 	@echo "... src/nodes/BrightnessNode.i"
 	@echo "... src/nodes/BrightnessNode.s"
-	@echo "... src/nodes/ColorChannelSplitterNode.o"
-	@echo "... src/nodes/ColorChannelSplitterNode.i"
-	@echo "... src/nodes/ColorChannelSplitterNode.s"
 	@echo "... src/nodes/ContrastNode.o"
 	@echo "... src/nodes/ContrastNode.i"
 	@echo "... src/nodes/ContrastNode.s"
+	@echo "... src/nodes/EdgeDetectionNode.o"
+	@echo "... src/nodes/EdgeDetectionNode.i"
+	@echo "... src/nodes/EdgeDetectionNode.s"
 	@echo "... src/nodes/GrayscaleNode.o"
 	@echo "... src/nodes/GrayscaleNode.i"
 	@echo "... src/nodes/GrayscaleNode.s"
