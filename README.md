@@ -1,99 +1,114 @@
-Node-Based Image Processor
-A modular image processing application built with C++, OpenCV, ImGui, and ImNodes. It allows users to create image processing pipelines by connecting nodes (e.g., Brightness, Blur, Resize) in a graphical interface, processing images like ./assets/test.jpg and saving results to ./assets/output.jpg.
-Features
+Absolutely! Based on your project **Node Image Processor**, here’s the **Design Documentation** written in the same structure and format as your sample:
 
-Graphical Interface: Drag-and-drop node connections using ImNodes.
-Modular Nodes: Includes Input, Output, Brightness, Blur, Contrast, Sharpen, Grayscale, Edge Detection, Saturation, Threshold, and Resize nodes.
-Interactive Controls: Adjust node parameters (e.g., scale, threshold) via ImGui sliders.
-Extensible: Easily add new nodes without modifying existing code.
-OpenCV-Powered: Leverages OpenCV for robust image processing.
+---
 
-Prerequisites
+# 🖼️ Node Image Processor - Design Documentation
 
-System: Linux (tested on WSL with Ubuntu)
-Dependencies:
-CMake 3.10+
-OpenCV (libopencv-dev)
-SDL2 (libsdl2-dev)
-OpenGL (libgl1-mesa-dev)
+## 🔎 Project Overview
 
+The *Node Image Processor* is a modular, C++-based desktop application that enables users to build image processing workflows using a drag-and-drop **node-based interface**. Each node performs a specific function (e.g., blur, sharpen, resize), and nodes can be connected visually to define a processing pipeline. The application is built using **OpenCV**, **ImGui**, and **ImNodes**, offering real-time image preview and a highly interactive editing experience.
 
+---
 
-Installation
+## 📊 Architecture Overview
 
-Clone the Repository:
-git clone https://github.com/<your-username>/node-image-processor.git
-cd node-image-processor
+### 1. Node System
 
+#### • Base Class - Node  
+- Declared in `src/nodes/Node.h`  
+- Acts as the abstract interface for all image operation nodes.  
+- Core methods:
+  - `render()`: Displays the node’s properties in the UI.
+  - `process(const std::vector<cv::Mat>& inputs)`: Executes the node's image processing logic.
+  - Connection interface methods to manage input/output pins.
 
-Install Dependencies (Ubuntu/WSL):
-sudo apt-get update
-sudo apt-get install libopencv-dev libsdl2-dev libgl1-mesa-dev cmake build-essential
+#### • Specialized Nodes (in `src/nodes/`)  
+All processing nodes inherit from the base Node class and define their specific behavior:
+- `InputNode`: Loads images from a user-defined path.
+- `OutputNode`: Saves the final processed image to disk.
+- Image transformation nodes include:
+  - `BrightnessNode`
+  - `BlurNode`
+  - `ContrastNode`
+  - `SharpenNode`
+  - `GrayscaleNode`
+  - `EdgeDetectionNode`
+  - `SaturationNode`
+  - `ThresholdNode`
+  - `ResizeNode`
+  - `ColorChannelSplitterNode` (outputs R, G, B channels as separate flows)
 
+#### • Graph Execution (in `main.cpp`)
+- Manages a list of node instances and connection links.
+- Constructs a **Directed Acyclic Graph (DAG)** to determine node execution order.
+- Executes `process()` for each node in topological order.
+- Intermediate outputs are cached in memory and referenced by node ID.
 
-Build the Project:
-mkdir build && cd build
-cmake ..
-make
+---
 
+## 🧩 UI and Interaction
 
-Ensure Assets:
+#### • ImGui + ImNodes
+- **ImGui** renders node property windows and control panels.
+- **ImNodes** powers the interactive graph editor.
+- Right-click canvas context menu allows adding any node type.
+- Links can be created, deleted, and validated interactively.
 
-Place an image (e.g., test.jpg) in assets/ or use the provided one.
-The assets/ folder is copied to build/ during the build.
+#### • Input & Output Interaction
+- **InputNode** uses a text input to specify image file path.
+- **OutputNode** allows selecting file format (`.jpg`, `.png`) and provides a Save button.
+- Nodes dynamically update previews and outputs based on graph changes.
 
+---
 
+## ⚖ Design Decisions
 
-Usage
+### ✔ Node-Based Architecture  
+- Ensures high modularity and reusability.  
+- New features or operations can be added by subclassing the base `Node`.
 
-Run the Application:
-./NodeImageProcessor
+### ✔ OpenCV for Processing  
+- Efficient and reliable handling of image formats and transformations.  
+- Offers a large suite of image processing utilities out-of-the-box.
 
+### ✔ ImGui & ImNodes for GUI  
+- Immediate-mode GUI supports live updates and responsiveness.  
+- Node interaction feels intuitive and lightweight.
 
-GUI Interaction:
+### ✔ Simple Build System with CMake  
+- Manages third-party libraries and source files.  
+- Easily portable to other Linux environments.
 
-Canvas: Drag links between nodes (e.g., Input → Resize → Output).
-Properties: Adjust node settings (e.g., Resize scale to 0.5).
-Input Node: Set path to ./assets/test.jpg.
-Output Node: Set save path to ./assets/output.jpg, choose format (JPG/PNG), click "Save".
+---
 
+## 📑 Code Documentation Guidelines
 
-Example Workflow:
+- Code is documented with **inline comments** where logic is non-obvious.
+- Every node clearly separates:
+  - `render()` – UI drawing logic
+  - `process()` – image computation
+- Descriptive names used for classes, functions, and variables for clarity.
 
-Connect: Input → Brightness → Blur → Output.
-Set Brightness (+50), Blur (9), save to ./assets/output.jpg.
-View output.jpg to see the processed image.
+---
 
+## 📊 Third-Party Libraries Used
 
-Verify Output:
-ls ./assets/output.jpg
+| Library           | Purpose                                      |
+|------------------|----------------------------------------------|
+| OpenCV           | Core image processing logic                  |
+| ImGui            | Graphical interface rendering                |
+| ImNodes          | Node editor and connection management        |
+| SDL2             | Windowing and input handling                 |
+| OpenGL           | GPU rendering context                        |
+| CMake            | Build system and dependency management       |
 
+---
 
+## 🌟 Key Features Summary
 
-Project Structure
-node-image-processor/
-├── assets/               # Input/output images (e.g., test.jpg)
-├── libs/                 # External libraries
-│   ├── imgui/            # ImGui for GUI
-│   └── imnodes/          # ImNodes for node graph
-├── src/                  # Source code
-│   ├── nodes/            # Node implementations
-│   │   ├── InputNode.hpp/cpp
-│   │   ├── OutputNode.hpp/cpp
-│   │   ├── BrightnessNode.hpp/cpp
-│   │   └── ...           # Other nodes (Blur, Resize, etc.)
-│   ├── NodeBase.hpp/cpp  # Base node class
-│   ├── NodeGraph.hpp/cpp # Graph management
-│   └── main.cpp          # Application entry
-├── CMakeLists.txt        # Build configuration
-└── README.md             # Project documentation
-
-Adding New Nodes
-
-Create NewNode.hpp and NewNode.cpp in src/nodes/, inheriting from NodeBase.
-Implement process() for image processing and renderProperties() for GUI controls.
-Add to CMakeLists.txt under SOURCES.
-Include in main.cpp, instantiate, and add to NodeGraph.
-Rebuild and test.
-
+- C++ modular design with extensible node system  
+- Node-based real-time image editing  
+- Visual drag-and-drop editor  
+- File-based image input and output  
+- 15+ built-in processing nodes: filters, adjustments, transforms  
 
