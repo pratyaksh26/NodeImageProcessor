@@ -1,47 +1,34 @@
-Node Image Processor
-Node Image Processor is a simple tool to edit images by connecting blocks called nodes. Each node does one job, like making an image brighter or blurry. We can mix and match nodes to create cool effects, all through a drag-and-drop interface.
+Node-Based Image Processor
+A modular image processing application built with C++, OpenCV, ImGui, and ImNodes. It allows users to create image processing pipelines by connecting nodes (e.g., Brightness, Blur, Resize) in a graphical interface, processing images like ./assets/test.jpg and saving results to ./assets/output.jpg.
 Features
 
-Graphical Interface: Built with ImGui and ImNodes for easy node-based editing.
-Dynamic Node Creation: Right-click to add any node, as many times as needed.
-Nodes:
-Input Node: Loads an image (e.g., ./assets/test.jpg).
-Output Node: Saves the edited image (e.g., ./assets/output.jpg) as jpg or png.
-Brightness Node: Adjusts image lightness or darkness.
-Blur Node: Makes the image fuzzy with adjustable blur size.
-Contrast Node: Changes color strength for bold or faded looks.
-Sharpen Node: Makes edges clearer.
-Grayscale Node: Turns the image black-and-white.
-Edge Detection Node: Finds outlines, like a sketch.
-Saturation Node: Adjusts color brightness.
-Threshold Node: Creates a black-and-white image with no grays.
-Resize Node: Changes image size.
-Color Channel Splitter Node: Splits image into blue, green, and red channels.
+Graphical Interface: Drag-and-drop node connections using ImNodes.
+Modular Nodes: Includes Input, Output, Brightness, Blur, Contrast, Sharpen, Grayscale, Edge Detection, Saturation, Threshold, and Resize nodes.
+Interactive Controls: Adjust node parameters (e.g., scale, threshold) via ImGui sliders.
+Extensible: Easily add new nodes without modifying existing code.
+OpenCV-Powered: Leverages OpenCV for robust image processing.
 
+Prerequisites
 
-
-Requirements
-
-OS: Linux (tested on WSL with Ubuntu)
+System: Linux (tested on WSL with Ubuntu)
 Dependencies:
 CMake 3.10+
-OpenCV 4.x
-SDL2
-OpenGL
-A C++17 compiler (e.g., g++)
+OpenCV (libopencv-dev)
+SDL2 (libsdl2-dev)
+OpenGL (libgl1-mesa-dev)
 
 
 
 Installation
 
 Clone the Repository:
-git clone https://github.com/yourusername/node-image-processor.git
+git clone https://github.com/<your-username>/node-image-processor.git
 cd node-image-processor
 
 
 Install Dependencies (Ubuntu/WSL):
 sudo apt-get update
-sudo apt-get install libopencv-dev libsdl2-dev libgl1-mesa-dev cmake g++
+sudo apt-get install libopencv-dev libsdl2-dev libgl1-mesa-dev cmake build-essential
 
 
 Build the Project:
@@ -50,66 +37,63 @@ cmake ..
 make
 
 
-Copy Test Image:
-cp ../assets/test.jpg ./assets/test.jpg
+Ensure Assets:
+
+Place an image (e.g., test.jpg) in assets/ or use the provided one.
+The assets/ folder is copied to build/ during the build.
 
 
 
 Usage
 
-Run the Program:
+Run the Application:
 ./NodeImageProcessor
 
 
-Basic Steps:
+GUI Interaction:
 
-Canvas Window:
-Starts with an Input Node.
-Right-click to add nodes (e.g., Output, Brightness, Color Channel Splitter).
-Drag to connect nodes (e.g., Input -> Brightness -> Output).
-
-
-Properties Window:
+Canvas: Drag links between nodes (e.g., Input → Resize → Output).
+Properties: Adjust node settings (e.g., Resize scale to 0.5).
 Input Node: Set path to ./assets/test.jpg.
-Output Node: Set save path (e.g., ./assets/output.jpg), pick jpg/png, click Save.
-Other Nodes: Adjust settings like brightness or blur size.
+Output Node: Set save path to ./assets/output.jpg, choose format (JPG/PNG), click "Save".
 
 
-Example:
-Add Color Channel Splitter and three Output Nodes.
-Connect: Input -> Splitter -> Output (Blue), Output (Green), Output (Red).
-Save as ./assets/output_blue.jpg, etc.
+Example Workflow:
+
+Connect: Input → Brightness → Blur → Output.
+Set Brightness (+50), Blur (9), save to ./assets/output.jpg.
+View output.jpg to see the processed image.
 
 
-
-
-View Outputs:
-ls ./assets/output*.jpg
-
-Copy to view outside WSL:
-cp ./assets/output.jpg /mnt/c/Users/YourName/Desktop/output.jpg
+Verify Output:
+ls ./assets/output.jpg
 
 
 
 Project Structure
+node-image-processor/
+├── assets/               # Input/output images (e.g., test.jpg)
+├── libs/                 # External libraries
+│   ├── imgui/            # ImGui for GUI
+│   └── imnodes/          # ImNodes for node graph
+├── src/                  # Source code
+│   ├── nodes/            # Node implementations
+│   │   ├── InputNode.hpp/cpp
+│   │   ├── OutputNode.hpp/cpp
+│   │   ├── BrightnessNode.hpp/cpp
+│   │   └── ...           # Other nodes (Blur, Resize, etc.)
+│   ├── NodeBase.hpp/cpp  # Base node class
+│   ├── NodeGraph.hpp/cpp # Graph management
+│   └── main.cpp          # Application entry
+├── CMakeLists.txt        # Build configuration
+└── README.md             # Project documentation
 
-src/: Main code and node logic.
-src/nodes/: Individual node implementations.
-assets/: Sample images like test.jpg.
-libs/: ImGui and ImNodes libraries.
+Adding New Nodes
 
-Contributing
-We welcome contributions! To help out:
+Create NewNode.hpp and NewNode.cpp in src/nodes/, inheriting from NodeBase.
+Implement process() for image processing and renderProperties() for GUI controls.
+Add to CMakeLists.txt under SOURCES.
+Include in main.cpp, instantiate, and add to NodeGraph.
+Rebuild and test.
 
-Fork the repository.
-Create a branch: git checkout -b my-feature.
-Make changes and commit: git commit -m "Add my feature".
-Push to your fork: git push origin my-feature.
-Open a pull request.
 
-Please include tests and update this README if you add new nodes or features.
-License
-MIT License. See LICENSE file for details.
-Contact
-Questions? Open an issue on GitHub or email yourusername@example.com.
-Happy image editing!
