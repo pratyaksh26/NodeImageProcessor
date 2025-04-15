@@ -1,6 +1,3 @@
-Absolutely! Based on your project **Node Image Processor**, here’s the **Design Documentation** written in the same structure and format as your sample:
-
----
 
 # 🖼️ Node Image Processor - Design Documentation
 
